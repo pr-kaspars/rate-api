@@ -1,0 +1,9 @@
+#!/bin/bash
+file="./target/ratematcher-1.0-SNAPSHOT.jar" 
+main="com.zopacandidates.ratematcher.Application"
+if [ -e "$file" ]; then
+  java -cp "$file" "$main" "$@"
+else 
+  echo "Cannot find jar file"
+  exit 1
+fi
